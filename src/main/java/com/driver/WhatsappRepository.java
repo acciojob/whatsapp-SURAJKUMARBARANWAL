@@ -58,7 +58,7 @@ public class WhatsappRepository {
     }
 
     public int createMessage(String content) {
-        Message msg=new Message(content);
+        Message msg=new Message(++messageId,content);
         msg.setId(++messageId);
         msg.setTimestamp(new Date());
         return msg.getId();
